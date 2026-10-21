@@ -1,5 +1,5 @@
-// Add the WhatsApp number in international format, without +, spaces, or dashes.
-const WHATSAPP_NUMBER = "234XXXXXXXXXX";
+// WhatsApp number in international format, without +, spaces, or dashes.
+const WHATSAPP_NUMBER = "2347032091735";
 const DEFAULT_MESSAGE = "Hello Peter, I visited your portfolio and would love to connect about your humanitarian work.";
 document.querySelectorAll(".whatsapp-link").forEach((link) => {
   const configured = /^\d{10,15}$/.test(WHATSAPP_NUMBER) && !WHATSAPP_NUMBER.includes("X");
@@ -9,7 +9,6 @@ document.querySelectorAll(".whatsapp-link").forEach((link) => {
     link.rel = "noopener noreferrer";
   } else {
     link.href = "contact.html";
-    if (link.closest(".site-header")) link.setAttribute("aria-label", "Contact page — WhatsApp number needs to be configured");
   }
 });
 document.querySelectorAll(".year").forEach((el) => { el.textContent = new Date().getFullYear(); });
